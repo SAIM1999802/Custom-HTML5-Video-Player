@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Custom HTML5 Video Player</title>
+</head>
+
+<body>
+
+    <div class="player">
+        <video class="player__video viewer" src="./video/videoplayback.webm"></video>
+
+        <div class="player-control">
+            <div class="progress">
+                <div class="progress_filled"></div>
+            </div>
+            <div class="controls">
+                <button class="player_btn toggle">⏵</button>
+                <label for="vol">Volume :</label>
+                <input type="range" id="vol" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+                <label for="speed">Speed :</label>
+                <input type="range" id="speed" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1"
+                    value="1">
+                <button data-skip="-10" class="player_btn">« 10s</button>
+                <button data-skip="10" class="player_btn">10s »</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./app.js" defer></script>
+
+</html>

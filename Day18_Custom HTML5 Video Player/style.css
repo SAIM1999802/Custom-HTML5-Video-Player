@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #121212;
+    margin: 0;
+}
+
+.player {
+    max-width: 750px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    background: black;
+}
+
+.player__video {
+    width: 100%;
+    height: auto;
+}
+
+/* Controls will be hidden by default */
+.player-control {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show controls when hovering over the player */
+.player:hover .player-control {
+    opacity: 1;
+}
+
+.progress {
+    width: 95%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.progress_filled {
+    width: 2%;
+    height: 100%;
+    background: #f00;
+    transition: width 0.1s;
+    border-radius: 3px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.player_btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 1% 2% 1%;
+    margin-bottom: 1.5%;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.player_btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.player__slider {
+    width: 15%;
+    accent-color: #f00;
+}
